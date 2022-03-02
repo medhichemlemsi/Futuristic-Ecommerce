@@ -1,0 +1,40 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "E-commerce",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js ",
+    "client": "cd client && npm run start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node seeder.js",
+    "data:destroy": "node seeder.js -d",
+    "server-install": "npm install",
+    "client-install": "cd client && npm install",
+    "install-all": "concurrently \"npm run server-install\" \"npm run client-install\"",
+    "heroku-postbuild": " cd client && npm install && npm run build"
+  },
+  "author": "Med hichem Lemsi",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^7.0.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^14.1.0",
+    "express": "^4.17.2",
+    "express-async-handler": "^1.2.0",
+    "express-validator": "^6.14.0",
+    "http-proxy-middleware": "^2.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.7",
+    "multer": "^1.4.4",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0",
+    "stripe": "^8.197.0"
+  }
+}
